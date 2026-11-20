@@ -177,15 +177,6 @@ body {
   position: relative;
 }
 
-.urgent-note::before {
-  content: '⚠️';
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
-}
-
 .urgent-note strong {
   font-size: 1.1rem;
   display: block;
@@ -205,15 +196,6 @@ body {
   margin: 30px 0;
   border-radius: 0 8px 8px 0;
   position: relative;
-}
-
-.groups-note::before {
-  content: '📋';
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.5rem;
 }
 
 .groups-note strong {
