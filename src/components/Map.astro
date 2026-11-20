@@ -1,0 +1,21 @@
+---
+const Maps = ({ lat, lng, label }) => {
+  return (
+    <div>
+      <iframe
+        width="100%"
+        height="250"
+        style="border:0"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src={`https://www.google.com/maps/embed?pb=!4m5!4m4!1s0x0:0x0!2m3!3e2!3d${lat}!4e3!3m1!1s${lng}`}>
+      </iframe>
+    </div>
+  );
+};
+
+export const __args__ = {
+  lat: 40.4168,
+  lng: -3.7038,
+  label: 'Madrid'
+};

@@ -1,0 +1,191 @@
+---
+import Map from './components/Map.astro';
+import '../styles/globals.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Batida de Búsqueda - Fran</title>
+    <link rel="stylesheet" href="/dist/css/globals.css" />
+    <style>
+      :root {
+        --primary-red: #d32f2f;
+        --primary-white: #ffffff;
+        --secondary-red: #b71c1c;
+        --background: #fff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: var(--background);
+        color: #333;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .header {
+        text-align: center;
+        padding: 40px 20px;
+        background: var(--primary-red);
+        color: var(--primary-white);
+      }
+
+      .header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      .header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+      }
+
+      .section {
+        margin-bottom: 40px;
+        padding: 20px;
+        border: 2px solid var(--primary-red);
+        border-radius: 8px;
+        background: var(--primary-white);
+        margin: 20px 0;
+      }
+
+      .section h2 {
+        color: var(--primary-red);
+        margin-top: 0;
+        font-size: 1.5rem;
+      }
+
+      .info-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .info-list li {
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .info-list li:last-child {
+        border-bottom: none;
+      }
+
+      .map-link {
+        color: var(--primary-red);
+        text-decoration: underline;
+        word-break: break-all;
+      }
+
+      .urgent-note {
+        background: #fff3e0;
+        border-left: 4px var(--primary-red) solid;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      .groups-note {
+        background: #e8f5e9;
+        border-left: 4px var(--primary-green) solid;
+        padding: 15px;
+        margin: 20px 0;
+      }
+
+      .cta {
+        text-align: center;
+        margin: 40px 0;
+      }
+
+      .cta button {
+        background: var(--primary-red);
+        color: var(--primary-white);
+        border: none;
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .cta button:hover {
+        background: var(--secondary-red);
+      }
+
+      .foto-desaparecido {
+        text-align: center;
+        margin: 30px 0;
+      }
+
+      .foto-desaparecido img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 4px solid var(--primary-white);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Batida de Búsqueda</h1>
+        <p>Búsqueda de Fran - 21 de noviembre de 2026</p>
+      </header>
+
+      <section class="section">
+        <h2>Información de la Reunión</h2>
+        <p><strong>Fecha:</strong> Mañana, 21 de noviembre de 2026</p>
+        <p><strong>Hora:</strong> 10:00 AM</p>
+        <p><strong>Punto de reunión:</strong> <a href="https://maps.app.goo.gl/n5xKgBunquj9JE9Q6" class="map-link" target="_blank">https://maps.app.goo.gl/n5xKgBunquj9JE9Q6</a></p>
+      </section>
+
+      <section class="section">
+        <h2>Lugar donde apareció el coche de Fran</h2>
+        <p><a href="https://maps.app.goo.gl/FiRu6Nrkxj62RQ8Y6" class="map-link" target="_blank">https://maps.app.goo.gl/FiRu6Nrkxj62RQ8Y6</a></p>
+      </section>
+
+      <section class="section">
+        <h2>Punto donde apareció la cartera y llaves</h2>
+        <p><a href="https://maps.app.goo.gl/bpNFkJUq3hTfxnPE8" class="map-link" target="_blank">https://maps.app.goo.gl/bpNFkJUq3hTfxnPE8</a></p>
+      </section>
+
+      <div class="urgent-note">
+        <strong>⚠️ Información Importante:</strong> Mañana lloverá mucho. Por favor, trae ropa de agua y buen calzado.
+      </div>
+
+      <section class="section">
+        <h2>Formación de Grupos</h2>
+        <p>Dependiendo de cuánta gente acuda, haremos grupos de 2, 3, 4, 5 o 6 personas.</p>
+      </section>
+
+      <section class="section">
+        <h2>Información del Desaparecido</h2>
+        <div class="foto-desaparecido">
+          <img src="/sos.jpg" alt="Fran - desaparecido" />
+          <p>Información del desaparecido se adicionará</p>
+        </div>
+        <p>Los perros ya han buscado rastro, pero queremos tener la certeza de que Fran no está aquí.</p>
+      </section>
+
+      <div class="groups-note">
+        <strong>📋 Recordatorio:</strong> Según la asistencia, se formarán grupos de 2 a 6 personas para cubrir más terreno de manera efectiva.
+      </div>
+
+      <footer class="cta">
+        <button>Confirmar Asistencia</button>
+      </footer>
+    </div>
+  </body>
+</html>
